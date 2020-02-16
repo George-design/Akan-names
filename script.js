@@ -6,45 +6,55 @@ function getDayNumber(CC,YY,DD,MM){
 
 }
 
- $(Document).ready(function(){
 
-    $('#inputForm').submit(function(event){
-        let YY = $('input#yob').val();
+$(Document).ready(function()
+     {
+         $('#inputForm').submit(function(event){
+        let yearOfBirth = $('input#yob').val();
         let MM = $('input#mob').val();
         let DD = $('input#dob').val();
-        let MM = document.getElementById("month").value===;
-        let DD = document.getElementById("date").value===;
         let CC = yearOfBirth.toString().slice(0,2)
         let YY = yearOfBirth.toString().slice(2,4)
-        let gender=document.getElementById("gender")
-        let gender =genders.options[genders.selectedIndex].text;
-        let akhanName;any
+        let gender= $("input[name='gender']:checked").val();
+       
 
-        console.log(gender)
+        
 
         day = getDayNumber(CC,YY,DD,MM)
 
-        //function getName(){
-            {if(document.getElementById("date").value===)
+        function results(gender){
+            if(gender ==='male'){
+                akhanName = maleNames[day]
+            }
+            else{
+                akhanName = femaleNames[day]
+            }
+
+            return akhanName
+        }
+        
+
+        function getName(){
+            if(YY===""){
                 alert("you must enter a value");
     
-            }elseIf{(document.getElementById("month").value===)
-                    alert("you must enter a value");
-
-            }elseIf{(document.getElementById("yearOfBirth").value===)
-                       alert("you must enter a value");
-
-            }elseIf{(document.getElementById("gender").options[document.getElementById("gender").selectedIndex].text===""){
-                      alert("you must enter a value");
-
-            }else{
-                return;false
             }
-            Console.log(akhanName)
+            else if(MM< 0 || MM > 12) {
+                    alert("you must enter a value between 0 and 12");
+
+            }
+            else if(DD < 0 || DD > 31 ){ 
+                       alert("you must enter a value between 0 and 31");
+
+            }
+          else{
+                console.log(results(gender))
+            }
+          
         }
 
-     
+        getName()
 
-         
+         event.preventDefault()
     })
  })
