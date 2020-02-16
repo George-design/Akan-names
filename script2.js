@@ -7,12 +7,6 @@ function getDayNumber(CC,YY,DD,MM){
 }
 
 
-let YY= document.getElementById('YY').value;
-let MM = document.getElementById('DD').value;
-let DD = document.getElementById('MM').value;
-let CC = yearOfBirth.toString().slice(0,2);
-let YY = yearOfBirth.toString().slice(2,4);
-let gender= $("input[name='gender']:checked").val();
 
 
 function test() {
@@ -21,20 +15,39 @@ function test() {
 
 
 function getName(){
-    if(YY===""){
+    let yearOfBirth= document.getElementById('YY').value;
+let MM = document.getElementById('MM').value;
+let DD = document.getElementById('DD').value;
+let CC = yearOfBirth.toString().slice(0,2);
+let YY = yearOfBirth.toString().slice(2,4);
+let gender= document.querySelector('input[name="gender"]:checked').value;
+
+day = getDayNumber(CC,YY,DD,MM)
+
+function getResults(genderName){
+    if(genderName ==='male'){
+        akhanName = maleNames[day]
+    }else{
+        akhanName = femaleNames[day]
+    }
+
+    return akhanName
+}
+
+    if(yearOfBirth===""){
         alert("you must enter a value");
 
     }
-    else if(MM< 0 || MM > 12) {
+    else if(MM< 0 || MM > 31 || MM ==='') {
             alert("you must enter a value between 0 and 12");
 
     }
-    else if(DD < 0 || DD > 31 ){ 
+    else if(DD < 0 || DD > 31 || DD=='' ){ 
                alert("you must enter a value between 0 and 31");
 
     }
   else{
-        console.log(hello)
+        document.getElementById('output').innerHTML = 'Your Akhan name is ' + getResults(gender)
     }
   
 }
