@@ -6,30 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-
-    <script src='script.js'></script>
-    <link href='styles.css' rel='stylesheet'>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="script2.js"></script>
+  <link href="styles.css" rel='stylesheet'/>
 </head>
 
 <body>
     <h2>Akhan names</h2>
-    <form id='inputForm'>
 
+
+    <br><br>
+    <form method="post" onsubmit="return false" class="form">
         <input type='text' value='' id="YY" placeholder='Enter your year of birth'>
-
         <input type='text' value='' id="MM" placeholder='Enter your month of birth'>
         <input type='text' value='' id="DD" placeholder='Enter your date of birth'>
-        <br />
+        </br>
 
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
+
+        <input type="radio" id="male" name="gender" value="male" checked>male
+
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label><br>
 
-        <button type='submit'>Submit</button>
-
+        <button
+        onclick = "JavaScript:exampleFunction()">Submit</button>
+            
+        
     </form>
+
 </body>
 
 </html>
