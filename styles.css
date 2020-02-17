@@ -1,5 +1,5 @@
 *{
-    background-color: black;
+    background-image: url(forest.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     opacity: 5;
@@ -15,4 +15,8 @@ form{
 
 <h2>{
     font-family: Cambria;
+}
+
+.btn{
+    background-color: blanchedalmond;
 }
