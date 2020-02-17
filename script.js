@@ -32,7 +32,7 @@ let gender= document.querySelector('input[name="gender"]:checked').value;
         }
         
 
-        function getName(){
+        function getName() {
             if(yearOfBirth===""){
                 alert("you must enter a value");
     
