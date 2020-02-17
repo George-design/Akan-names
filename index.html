@@ -11,53 +11,69 @@
     <script src="script2.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="styles.css" rel='stylesheet' />
+    <link href="styles.css" rel='stylesheet'/>
+    <p></p>
 </head>
 
 <body>
-    <div class="container">
-        <div class="jumbotron">
-            <h2 class='text-success'>Akhan names</h2>
-        </div>
-
-
-        <br><br>
-<div>
-    <form method="post" onsubmit="return false" class="form-group ">
-<div class="form-group">
-    <input class='form-group' type='number' value='' id="YY" placeholder='Enter your year of birth'>
-</div>
-        <div class="form-group">
-            <input class='form-group' type='number' value='' id="MM" placeholder='Enter your month of birth'>
-        </div>
-       <div class="form-group">
-        <input class='form-group' type='number' value='' id="DD" placeholder='Enter your date of birth'>
-       </div>
-        </br>
-<div class="form-group">
-<div class="form-group">
-    <input class='text-white ' type="radio" id="male" name="gender" value="male" checked>
-    <label class='text-white' for="female">Male</label>
 
 </div>
-    <input class='form-group ' type="radio" id="female" name="gender" value="female">
-    <label class='text-white' for="female">Female</label>
-</div>
 
-<br>
-
-        <button class='btn medium padd' type='submit' onclick="getName();">Submit</button class='btn medium padd'>
-
-        <button class='btn medium padd' type='reset' ;>Reset</button>
-
-
-    </form>
-</div>
-
-        <div class='text-white' id='output'>
-
+    <div class="container-fluid">
+    
+         <div class="jumbotron">
+            <h2 class='text-danger'>AKHAN NAMES CREATOR</h2>
+            
+                <p class="text-white">Akan Name creator is an application that generates the day of the week you were born based on your birthday and gives you a corresponding <i>Akan Name</i>. Fill in 
+                    your date of birth and click the generate button  to see what it does. Don't forget to check in your gender. </p>
+        
         </div>
     </div>
+    
+    <br><br>
+    <div>
+        <form method="post" onsubmit="return false" class="form-group ">
+            <div class="form-group">
+                <input class='form-group' type='number' value='' id="YY" placeholder='Enter your year of birth'>
+            </div>
+            <div class="form-group">
+                <input class='form-group' type='number' value='' id="MM" placeholder='Enter your month of birth'>
+            </div>
+            <div class="form-group">
+                <input class='form-group' type='number' value='' id="DD" placeholder='Enter your date of birth'>
+            </div>
+        
+            </br>
+            
+                <div class="form-group">
+                    <input class='text-white ' type="radio" id="male" name="gender" value="male" checked>
+                    <label class='text-white' for="female">Male</label>
+                
+               
+                <input class='form-group ' type="radio" id="female" name="gender" value="female">
+                <label class='text-white' for="female">female</label>
+            
+            </div>
+        
+            <br>
+
+            <button class='btn medium padd' type='submit' onclick="getName();">Submit</button class='btn medium padd'>
+
+            <button class='btn medium padd' type='reset' ;>Reset</button>
+
+
+        </form>
+    </div>
+
+    <div class='text-white' id='output'>
+
+    </div>
+    <div class="card-footer bg-dark">
+        <a href="mailto:davidmaryngotho@gmail.com"><strong>Email:</strong>davidmaryngotho@gmail.com</a>
+        <a href="#">Copyright (c) 2019 George-Design</a>
+        <a href="#"><strong>Phone:</strong>0728782790</a>
+    </div>
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -67,6 +83,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    
+    
 </body>
 
 </html>

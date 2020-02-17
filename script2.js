@@ -7,13 +7,6 @@ function getDayNumber(CC,YY,DD,MM){
 }
 
 
-
-
-function test() {
-    console.log('hello')                  
-}
-
-
 function getName(){
     let yearOfBirth= document.getElementById('YY').value;
 let MM = document.getElementById('MM').value;
@@ -46,7 +39,7 @@ function getResults(genderName){
                alert("you must enter a value between 0 and 31");
 
     }
-  else{
+    else{
         document.getElementById('output').innerHTML = 'Your Akhan name is ' + getResults(gender)
     }
   

@@ -7,16 +7,14 @@ function getDayNumber(CC,YY,DD,MM){
 }
 
 
-$(Document).ready(function()
-     {
-         $('#inputForm').submit(function(event){
-        let yearOfBirth = $('input#yob').val();
-        let MM = $('input#mob').val();
-        let DD = $('input#dob').val();
-        let CC = yearOfBirth.toString().slice(0,2)
-        let YY = yearOfBirth.toString().slice(2,4)
-        let gender= $("input[name='gender']:checked").val();
-       
+function getName(){
+    let yearOfBirth= document.getElementById('YY').value;
+let MM = document.getElementById('MM').value;
+let DD = document.getElementById('DD').value;
+let CC = yearOfBirth.toString().slice(0,2);
+let YY = yearOfBirth.toString().slice(2,4);
+let gender= document.querySelector('input[name="gender"]:checked').value;
+
 
         
 
@@ -35,7 +33,7 @@ $(Document).ready(function()
         
 
         function getName(){
-            if(YY===""){
+            if(yearOfBirth===""){
                 alert("you must enter a value");
     
             }
@@ -53,8 +51,8 @@ $(Document).ready(function()
           
         }
 
-        getName()
-
-         event.preventDefault()
-    })
- })
+        else{
+            document.getElementById('output').innerHTML = 'Your Akhan name is ' + getResults(gender)
+        }
+      
+    }
